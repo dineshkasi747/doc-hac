@@ -1,0 +1,71 @@
+# Environment
+.env
+*.env
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Trained models (too large for git)
+models_saved/
+*.pkl
+*.tflite
+*.h5
+*.pt
+*.pth
+*.bin
+
+# Datasets (too large for git)
+datasets/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# FastAPI
+*.pyc
+
+# Node modules (for React dashboard)
+node_modules/
+dist/
+build/
+.next/
+
+# React env
+.env.local
+.env.development
+.env.production
+
+# Coverage
+coverage/
+.coverage
+htmlcov/
+
+# Temp files
+tmp/
+temp/
+*.tmp
