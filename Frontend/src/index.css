@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f6fa;
+    color: #2d3436;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+
+  .card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white font-semibold rounded-lg px-5 py-2.5
+           hover:bg-blue-700 transition-colors duration-200 disabled:opacity-60
+           disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-600 font-semibold rounded-lg px-5 py-2.5
+           border border-blue-600 hover:bg-blue-50 transition-colors duration-200;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white font-semibold rounded-lg px-5 py-2.5
+           hover:bg-green-600 transition-colors duration-200 disabled:opacity-60
+           disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white font-semibold rounded-lg px-5 py-2.5
+           hover:bg-red-600 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50
+           text-gray-800 text-sm focus:border-blue-400 focus:bg-white
+           transition-colors duration-200;
+  }
+
+  .label {
+    @apply block text-xs font-semibold text-gray-500 uppercase
+           tracking-wide mb-1.5;
+  }
+
+  .badge-pending {
+    @apply bg-yellow-100 text-yellow-700 text-xs font-semibold
+           px-3 py-1 rounded-full;
+  }
+
+  .badge-confirmed {
+    @apply bg-green-100 text-green-700 text-xs font-semibold
+           px-3 py-1 rounded-full;
+  }
+
+  .badge-rejected {
+    @apply bg-red-100 text-red-700 text-xs font-semibold
+           px-3 py-1 rounded-full;
+  }
+
+  .section-title {
+    @apply text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3;
+  }
+
+  .page-container {
+    @apply max-w-6xl mx-auto px-6 py-8;
+  }
+
+  .symptom-chip {
+    @apply bg-blue-50 text-blue-600 text-xs font-medium
+           px-3 py-1 rounded-full border border-blue-100;
+  }
+
+  .finding-row {
+    @apply flex items-center gap-3 px-3 py-2 bg-gray-50
+           rounded-lg text-sm;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm p-5 flex flex-col gap-1;
+  }
+  }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
